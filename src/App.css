@@ -1,38 +1,61 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  font-size: 62.5%;
+  direction: rtl;
+}
+
+body{
+  background-color:#F7F7F7;
+  font-family: 'El Messiri', sans-serif;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header{
+  width: 100%;
+  background-color:#cf4343;
+  color:white;
+  padding:15px;
+}
+.container{
+  width:100%;
+  margin:0px;
+  display: grid;
+  place-items: center;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (max-width: 900px) {
+  .container { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 400px) {
+  .container { grid-template-columns: repeat(1, 1fr); }
+}
+.Fruit-cart{
+  display: inline-block;
+  margin: 10px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  width:200px;
+  height:200px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Cart{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
